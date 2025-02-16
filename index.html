@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Facts</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://example.com/chocolate-background.jpg'); /* Replace with your chocolate image URL */
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chocolate Facts</h1>
+        <button id="show-facts">Show Facts</button>
+        <div id="facts" class="facts"></div>
+    </div>
+    <script>
+        document.getElementById('show-facts').addEventListener('click', function() {
+            const facts = [
+                "1. Chocolate comes from the cacao bean, which is native to Central and South America.",
+                "2. There are several types of chocolate, including dark chocolate, milk chocolate, and white chocolate.",
+                "3. Dark chocolate is rich in antioxidants and has been linked to various health benefits.",
+                "4. Chocolate contains compounds like phenylethylamine (PEA), which can promote feelings of happiness.",
+                "5. It takes about 400 cacao beans to make one pound of chocolate.",
+                "6. The average American consumes about 9.5 pounds of chocolate each year.",
+                "7. Chocolate is a popular gift on Valentine's Day.",
+                "8. Chocolate melts at around 93°F (34°C), just below body temperature.",
+                "9. Cacao refers to the raw beans, while cocoa refers to the processed product.",
+                "10. Chocolate is a versatile ingredient used in various dishes."
+            ];
+
+            const factsContainer = document.getElementById('facts');
+            factsContainer.innerHTML = facts.join('<br>');
+        });
+    </script>
+</body>
+</html>
